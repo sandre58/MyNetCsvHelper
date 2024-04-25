@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>A comprehensive .NET class library that extends the capabilities of CsvHelper, a popular CSV parsing and writing library for .NET applications.</Description>
+    <PackageTags>My;Utilities;CsvHelper</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.104.0-preview2" />
+    <PackageReference Include="CsvHelper" Version="31.0.4" />
+    <PackageReference Include="MyNet.Humanizer" Version="1.0.0" />
+    <PackageReference Include="MyNet.Utilities" Version="1.0.0" />
+  </ItemGroup>
+
+</Project>
