@@ -86,4 +86,4 @@ My .NET CsvHelper is provided as-is under the MIT license. For more information 
 [framework-shield]: https://img.shields.io/badge/.NET-8.0-purple
 [framework-url]: https://github.com/sandre58/MyNetCsvHelper/tree/main/src/MyNet.CsvHelper.Extensions
 [version-shield]: https://img.shields.io/nuget/v/MyNet.CsvHelper.Extensions
-[version-url]: https://github.com/sandre58/MyNetCsvHelper/pkgs/nuget/MyNet.CsvHelper.Extensions
+[version-url]: https://www.nuget.org/packages/MyNet.CsvHelper.Extensions
