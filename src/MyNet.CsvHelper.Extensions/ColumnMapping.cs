@@ -1,28 +1,23 @@
-﻿// Copyright (c) Stéphane ANDRE. All Right Reserved.
-// See the LICENSE file in the project root for more information.
+﻿// -----------------------------------------------------------------------
+// <copyright file="ColumnMapping.cs" company="Stéphane ANDRE">
+// Copyright (c) Stéphane ANDRE. All rights reserved.
+// </copyright>
+// -----------------------------------------------------------------------
 
 using System;
 using System.Linq.Expressions;
 using CsvHelper.TypeConversion;
-using MyNet.Utilities.Extensions;
+using MyNet.Utilities;
 
-namespace MyNet.CsvHelper.Extensions
+namespace MyNet.CsvHelper.Extensions;
+
+public class ColumnMapping<T, TMember>(Expression<Func<T, TMember>> expression, string resourceKey, ITypeConverter? typeConverter = null)
 {
-    public class ColumnMapping<T, TMember>
-    {
-        public string ResourceKey { get; }
+    public string ResourceKey { get; } = resourceKey;
 
-        public Expression<Func<T, TMember>> Expression { get; }
+    public Expression<Func<T, TMember>> Expression { get; } = expression;
 
-        public ITypeConverter? TypeConverter { get; private set; }
+    public ITypeConverter? TypeConverter { get; private set; } = typeConverter;
 
-        public ColumnMapping(Expression<Func<T, TMember>> expression, string resourceKey, ITypeConverter? typeConverter = null)
-        {
-            Expression = expression;
-            ResourceKey = resourceKey;
-            TypeConverter = typeConverter;
-        }
-
-        public override string? ToString() => ResourceKey.Translate();
-    }
+    public override string ToString() => ResourceKey.Translate();
 }
